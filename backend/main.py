@@ -19,7 +19,19 @@ ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 logger = logging.getLogger("voxa.gemini")
 app = FastAPI(title="Voxa Multilingual Voice Assistant", version="1.0.0")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5500", "http://127.0.0.1:5500", "http://localhost:8000", "http://127.0.0.1:8000"], allow_credentials=False, allow_methods=["GET", "POST", "OPTIONS"], allow_headers=["Content-Type"])
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5500",
+        "http://127.0.0.1:5500",
+        "https://voxa-frontend-one.vercel.app",
+    ],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 SYSTEM_INSTRUCTION = "You are a helpful multilingual voice assistant. Always detect the language the user is writing or speaking in, and respond in that exact same language. If the user switches languages mid-conversation, switch your response language too."
 MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 # Set this only to a model that has been verified for the configured API project.
