@@ -1,4 +1,4 @@
-const API = window.VOXA_API_URL || "http://127.0.0.1:8000/api";
+const API = window.VOXA_API_URL || "https://voxa-lrf9.onrender.com/api";
 const STORAGE_KEY = "voxa-chat-v1";
 const ttsCodes = {auto:"en",en:"en",hi:"hi",es:"es",fr:"fr",de:"de",it:"it",pt:"pt",ja:"ja",ko:"ko","zh-CN":"zh-CN",ar:"ar",ru:"ru",bn:"bn",ta:"ta",te:"te",mr:"mr",ur:"ur"};
 const sttCodes = {auto:"en-US",en:"en-US",hi:"hi-IN",es:"es-ES",fr:"fr-FR",de:"de-DE",it:"it-IT",pt:"pt-PT",ja:"ja-JP",ko:"ko-KR","zh-CN":"zh-CN",ar:"ar-SA",ru:"ru-RU",bn:"bn-IN",ta:"ta-IN",te:"te-IN",mr:"mr-IN",ur:"ur-PK"};
